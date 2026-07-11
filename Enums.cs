@@ -6,7 +6,6 @@ namespace STUDY.MathGame
 {
     internal class Enums
     {
-        
         internal enum Operation
         {
             Addition ='+',
