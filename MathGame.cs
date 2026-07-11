@@ -77,6 +77,7 @@ namespace STUDY.MathGame
             TimeOnly endTime = TimeOnly.FromDateTime(DateTime.Now);
             Console.WriteLine($"Вы закончили игру за {endTime- StartTime} секунд!\nНажмите любую клавишу для продолжения.");
             Console.ReadKey();
+            
         }
 
 
@@ -86,7 +87,7 @@ namespace STUDY.MathGame
             int diff = (int)difficulty;
             firstNumber = firstRand.Next(diff);
             secondNumber = firstRand.Next(diff);
-            if (operation == Operation.Division || secondNumber==0 || firstNumber%secondNumber!=0)
+            if (operation == Operation.Division)
             {
                 while (secondNumber == 0 || firstNumber % secondNumber != 0)
                 {

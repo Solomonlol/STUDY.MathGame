@@ -14,8 +14,8 @@ namespace STUDY.MathGame
             {
                 Console.Clear();
                 Console.WriteLine($"Введите тип опрерации(1-4):\n1:{(char)Operation.Addition}\n2:{(char)Operation.Substraction}\n3:{(char)Operation.Multiplication}\n4:{(char)Operation.Division}");
-                
-                
+
+
                 if (int.TryParse(Console.ReadLine(), out int choose) && choose >= 1 && choose < 5)
                 {
                     var operation = choose switch
@@ -27,9 +27,9 @@ namespace STUDY.MathGame
                     };
                     Console.Clear();
                     Console.WriteLine($"Введите уровень сложности(1-3):\n1:{Difficulty.Easy}\n2:{Difficulty.Medium}\n3:{Difficulty.Hard}");
-                    
+
                     if (int.TryParse(Console.ReadLine(), out choose) && choose >= 1 && choose < 4)
-                    { 
+                    {
                         var diff = choose switch
                         {
                             1 => Difficulty.Easy,
@@ -43,16 +43,25 @@ namespace STUDY.MathGame
                             MathGame game = new MathGame(diff, operation);
                             game.Game(choose);
                         }
-                        else Console.WriteLine("Неверный формат ввода!\nНажмите любую клавишу для прожолжения.");
+                        else
+                        {
+                            Console.WriteLine("Неверный формат ввода!\nНажмите любую клавишу для прожолжения.");
+                            Console.ReadKey();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Неверный формат ввода!\nНажмите любую клавишу для прожолжения.");
                         Console.ReadKey();
                     }
-                    else Console.WriteLine("Неверный формат ввода!\nНажмите любую клавишу для прожолжения.");
-                    Console.ReadKey();
 
                 }
-                else Console.WriteLine("Неверная операция!\nНажмите любую клавишу для продолжения.");
-                
-                Console.ReadKey();
+                else
+                {
+                    Console.WriteLine("Неверная операция!\nНажмите любую клавишу для продолжения.");
+
+                    Console.ReadKey();
+                }
             }
         }
     }
