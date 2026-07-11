@@ -6,12 +6,7 @@ namespace STUDY.MathGame
 {
     internal class Enums
     {
-        internal enum Menu
-        {
-            StartGame,
-            ViewHistory,
-            CleanHistory
-        }
+        
         internal enum Operation
         {
             Addition ='+',
