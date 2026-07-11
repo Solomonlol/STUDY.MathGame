@@ -54,12 +54,10 @@ namespace STUDY.MathGame
                         Console.WriteLine("Неверный формат ввода!\nНажмите любую клавишу для прожолжения.");
                         Console.ReadKey();
                     }
-
                 }
                 else
                 {
                     Console.WriteLine("Неверная операция!\nНажмите любую клавишу для продолжения.");
-
                     Console.ReadKey();
                 }
             }

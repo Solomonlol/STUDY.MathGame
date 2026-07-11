@@ -75,7 +75,9 @@ namespace STUDY.MathGame
                 i++;
             }
             TimeOnly endTime = TimeOnly.FromDateTime(DateTime.Now);
-            Console.WriteLine($"Вы закончили игру за {endTime- StartTime} секунд!\nНажмите любую клавишу для продолжения.");
+            Console.WriteLine($"Вы закончили игру за {endTime - StartTime} секунд!\n" +
+                $"Уровень сложности:{Difficulty}\n" +
+                $"Нажмите любую клавишу для продолжения.");
             Console.ReadKey();
             
         }
